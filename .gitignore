@@ -1,0 +1,33 @@
+# Local credentials and environment files
+.env
+.env.*
+!.env.example
+*.secret
+*.secrets
+*.key
+*.pem
+*.pfx
+*.p12
+
+# Runtime profiles and identifiers (keep only explicitly sanitized examples)
+config/rea-local.yaml
+config/*local*.yaml
+!config/*.example.yaml
+
+# Runtime logs and diagnostic dumps
+*.log
+logs/
+diagnostics/
+*.dump
+*.dmp
+
+# Local REA / tunnel runtime data
+rea-runtime/
+.tunnel/
+.tailscale/
+
+# Editor / OS noise
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
