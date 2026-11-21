@@ -1,0 +1,15 @@
+# 脱敏示例：仅展示结构意图，不保证适用于所有 tunnel-client 版本。
+# 请使用当前版本 CLI 生成/校验 profile，并遵循官方配置 schema。
+# 不要将真实 tunnel_id、组织/项目 ID、Runtime API Key 或其他凭据写入 Git。
+
+tunnel:
+  id: "<YOUR_TUNNEL_ID>"
+  # 其余字段以当前 tunnel-client 官方 profile schema 为准
+
+mcp:
+  # 本机 REA MCP endpoint
+  url: "http://127.0.0.1:8765/mcp"
+
+local_health:
+  # Tunnel Client 本地健康检查地址（部署默认值）
+  base_url: "http://127.0.0.1:8787"
