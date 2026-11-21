@@ -40,7 +40,7 @@ function Test-TunnelReady {
     $ready = Test-HttpEndpoint "$TunnelBaseUrl/readyz"
     return [pscustomobject]@{
         Health=$health; Ready=$ready
-        IsReady=($health.Reachable -and $ready.Reachable -and $ready.StatusCode -ge 200 -and $ready.StatusCode -lt 300)
+        IsReady=($health.Reachable -and $health.StatusCode -ge 200 -and $health.StatusCode -lt 300 -and $ready.Reachable -and $ready.StatusCode -ge 200 -and $ready.StatusCode -lt 300)
     }
 }
 function Show-Port([int]$Port, [string]$Name) {
